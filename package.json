@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "release": "release-it",
+    "typescript": "tsc --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npx tsc && chmod +x ./build/cli.js",
     "package": "pkg . --targets node14-macos-x64 --output hello"
   },
   "keywords": [],
-  "author": "",
+  "repository": "https://github.com/ximxim/rnfr-cli",
+  "author": "Azim Ahmed <azim.ahmed7@gmail.com> (https://github.com/ximxim/rnfr-cli)",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/config-conventional": "^13.2.0",
