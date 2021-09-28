@@ -1,6 +1,6 @@
 {
   "name": "rnfr-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./build/cli",
   "scripts": {
@@ -36,7 +36,7 @@
     "yargs": "^17.2.1"
   },
   "bin": {
-    "hello": "./build/cli.js"
+    "hello": "build/cli.js"
   },
   "pkg": {
     "scripts": "build/**/*.js"
@@ -71,7 +71,9 @@
   },
   "eslintConfig": {
     "root": true,
-    "extends": ["prettier"],
+    "extends": [
+      "prettier"
+    ],
     "rules": {
       "react-hooks/exhaustive-deps": "off",
       "prettier/prettier": [
@@ -86,7 +88,10 @@
       ]
     }
   },
-  "eslintIgnore": [ "node_modules/", "build/" ],
+  "eslintIgnore": [
+    "node_modules/",
+    "build/"
+  ],
   "prettier": {
     "quoteProps": "consistent",
     "singleQuote": true,
