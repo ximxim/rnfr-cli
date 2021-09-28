@@ -2,14 +2,13 @@
   "name": "rnfr-cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./build/cli",
   "scripts": {
     "release": "release-it",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "npx tsc && chmod +x ./build/cli.js",
-    "package": "pkg . --targets node14-macos-x64 --output hello"
+    "package": "pkg . --targets node14-macos-x64 --output hello",
+    "prepare": "npx tsc && chmod +x ./build/cli.js && yarn package"
   },
   "keywords": [],
   "repository": "https://github.com/ximxim/rnfr-cli",
@@ -69,10 +68,7 @@
   },
   "eslintConfig": {
     "root": true,
-    "extends": [
-      "@react-native-community",
-      "prettier"
-    ],
+    "extends": ["prettier"],
     "rules": {
       "react-hooks/exhaustive-deps": "off",
       "prettier/prettier": [
@@ -87,11 +83,7 @@
       ]
     }
   },
-  "eslintIgnore": [
-    "node_modules/",
-    "lib/",
-    "website/"
-  ],
+  "eslintIgnore": [ "node_modules/", "build/" ],
   "prettier": {
     "quoteProps": "consistent",
     "singleQuote": true,
