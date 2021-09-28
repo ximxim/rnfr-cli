@@ -14,6 +14,9 @@
   "repository": "https://github.com/ximxim/rnfr-cli",
   "author": "Azim Ahmed <azim.ahmed7@gmail.com> (https://github.com/ximxim/rnfr-cli)",
   "license": "ISC",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^13.2.0",
     "@release-it/conventional-changelog": "^3.3.0",
