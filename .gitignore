@@ -4,3 +4,6 @@ node_modules/
 
 # scripts
 hello
+
+# logs
+yarn-error.log
